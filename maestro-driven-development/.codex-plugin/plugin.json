@@ -1,0 +1,38 @@
+{
+  "name": "maestro-driven-development",
+  "version": "0.2.4",
+  "description": "Platform-aware development workflow skills with Maestro-first TDD.",
+  "author": {
+    "name": "Chiho"
+  },
+  "license": "MIT",
+  "keywords": [
+    "maestro",
+    "android",
+    "ios",
+    "web",
+    "mcp",
+    "tdd",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Maestro Driven Development",
+    "shortDescription": "Platform-aware requirements, planning, execution, and Maestro TDD skills.",
+    "longDescription": "A portable skill bundle for Maestro-supported targets, focused on Maestro-observable requirements, platform-aware implementation planning, task-by-task execution, and RED-GREEN-REFACTOR implementation with Maestro flows.",
+    "developerName": "Chiho",
+    "category": "Productivity",
+    "capabilities": [
+      "Write",
+      "Interactive",
+      "MCP"
+    ],
+    "defaultPrompt": [
+      "Plan a feature with Maestro TDD.",
+      "Grill requirements for Maestro coverage.",
+      "Execute a Maestro-backed plan task by task."
+    ],
+    "brandColor": "#3B82F6"
+  },
+  "mcpServers": "./.mcp.json"
+}

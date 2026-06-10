@@ -1,0 +1,20 @@
+{
+  "name": "codex-plugins",
+  "interface": {
+    "displayName": "Built by Chiho"
+  },
+  "plugins": [
+    {
+      "name": "maestro-driven-development",
+      "source": {
+        "source": "local",
+        "path": "./maestro-driven-development"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

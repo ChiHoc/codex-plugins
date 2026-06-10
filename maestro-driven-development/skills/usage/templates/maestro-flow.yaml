@@ -1,0 +1,14 @@
+# Replace the identity, fixture setup, and assertions before use.
+# Android/iOS use appId. Web uses url instead of appId.
+appId: <applicationId-or-bundleId>
+# url: <web-url>
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: "<ready or target state>"
+    timeout: 10000
+# Optional setup examples:
+# - openLink: "<scheme-or-url-for-fixture>"
+# - tapOn: "<visible text>"
+- assertVisible: "<expected user-visible result>"
