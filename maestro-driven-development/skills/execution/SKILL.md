@@ -1,6 +1,6 @@
 ---
 name: execution
-description: Use when an approved Maestro-backed implementation plan is ready to execute on a selected platform adapter.
+description: Use only when approved requirements, boundary analysis, and a Maestro-backed implementation plan with a complete Maestro test plan are ready to execute on a selected platform adapter.
 ---
 
 # Maestro Plan Execution
@@ -22,7 +22,12 @@ Use when:
 Do not use when:
 - Requirements are still unresolved.
 - The implementation plan lacks exact files, complete Maestro YAML drafts or flow files, commands, adapter selection, or expected RED reasons.
+- The implementation plan lacks a dedicated Maestro Test Plan section.
 - The required device, simulator, browser, app server, or platform tooling cannot be made available and the user expects real TDD evidence.
+
+## Direct Invocation Guard
+
+If this skill is invoked before requirements artifacts and the implementation plan exist, stop and route to the workflow entry point. If the plan exists but lacks a Maestro Test Plan with executable flow drafts, commands, expected RED reasons, setup/reset, and evidence expectations, route back to planning. Do not patch production code while repairing the plan.
 
 ## Required Setup
 

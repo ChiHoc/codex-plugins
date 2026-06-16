@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "prompt": "写一个 Maestro flow 并选择稳定 selector。",
+    "expected": "Agent selects the platform adapter, performs or reports environment preflight, drafts a focused flow with appId or url, setup/reset, stable selectors, waits, and assertions, avoiding coordinates and OCR unless documented as last resort."
+  },
+  {
+    "id": 2,
+    "prompt": "Maestro flow 失败了，区分环境、selector、missing behavior。",
+    "expected": "Agent classifies the failure before calling it RED, uses code context, UI/observability source, runtime logs, and hierarchy before screenshots, and only treats missing user-visible behavior as correct RED."
+  },
+  {
+    "id": 3,
+    "prompt": "当前 runtime 没有 Maestro MCP tools，list_devices 也不可用，但本机可能有 Maestro CLI；怎么继续验证？",
+    "expected": "Agent classifies missing MCP tools or failed list_devices as an MCP/service blocker, tells the user how to reload or enable the plugin, falls back to CLI preflight when available, and states that MCP reconnaissance/evidence is unavailable."
+  },
+  {
+    "id": 4,
+    "prompt": "用户说用 MDD 修一个功能，但只触发了 Maestro usage。",
+    "expected": "Agent does not treat usage as the full workflow. It routes to the workflow entry point unless requirements and a Maestro Test Plan already exist, and only uses usage for setup, preflight, selectors, YAML support, or failure diagnosis."
+  }
+]

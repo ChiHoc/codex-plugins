@@ -46,9 +46,9 @@ Support files are colocated inside the skill that owns them. Preserve the whole 
 
 1. Start with [`workflow/SKILL.md`](skills/workflow/SKILL.md).
 2. Clarify requirements with [`requirements/SKILL.md`](skills/requirements/SKILL.md) until every requirement is Maestro-observable or explicitly marked as a risk/non-goal.
-3. Plan implementation with [`planning/SKILL.md`](skills/planning/SKILL.md) to produce bite-sized implementation tasks and Maestro test flow drafts.
+3. Plan implementation with [`planning/SKILL.md`](skills/planning/SKILL.md) to produce a dedicated Maestro Test Plan, bite-sized implementation tasks, exact commands, and Maestro test flow drafts.
 4. Select the target platform adapter from [`usage/references/platform-adapters/`](skills/usage/references/platform-adapters/) and follow [`usage/SKILL.md`](skills/usage/SKILL.md) for Maestro MCP/CLI environment preflight, local MCP service/tool availability checks, YAML authoring, selector strategy, debugging, and evidence collection.
-5. Execute with [`execution/SKILL.md`](skills/execution/SKILL.md), following the plan task-by-task.
+5. Execute with [`execution/SKILL.md`](skills/execution/SKILL.md), following the approved requirements and Maestro Test Plan task-by-task.
 6. During execution, apply [`tdd/SKILL.md`](skills/tdd/SKILL.md) inside each behavior cycle to write each Maestro flow first, watch it fail for the correct reason, implement minimally, then make it pass.
 7. Diagnose failed or ambiguous Maestro TDD steps with platform diagnostics before using screenshots; screenshots are supplemental evidence only.
 

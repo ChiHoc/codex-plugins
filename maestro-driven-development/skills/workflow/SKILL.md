@@ -1,6 +1,6 @@
 ---
 name: workflow
-description: "Use when developing Maestro-supported Android, iOS, or Web features with requirements grilling, implementation planning, plan execution, Maestro-only TDD, platform adapters, and handoff."
+description: "Mandatory entry point for Maestro Driven Development/MDD on Android, iOS, or Web work. Use when the user asks to build, fix, implement, test, or plan with MDD or Maestro TDD. Always clarify requirements first, write a Maestro test plan inside the implementation plan second, then execute with Maestro-only RED/GREEN evidence."
 ---
 
 # Maestro Driven Development Orchestration
@@ -11,12 +11,22 @@ Use this as the entry point for feature work on Maestro-supported targets. It ke
 
 1. Requirements grilling.
 2. Platform adapter selection.
-3. Implementation planning.
+3. Maestro test planning inside implementation planning.
 4. Plan execution.
 5. Maestro-only TDD cycles inside plan execution.
 6. Final reporting inside plan execution.
 
 The bundle optimizes for more reliable code generation by turning ambiguous product intent into explicit, Maestro-observable acceptance criteria before implementation starts.
+
+## Mandatory Entry Contract
+
+When the user asks to use Maestro Driven Development, MDD, Maestro TDD, or this plugin for a feature, UI bug, or user-visible behavior change, start here and follow this contract:
+
+1. Clarify requirements before planning or coding.
+2. Produce a Maestro test plan before implementation. The plan must name the target adapter, app identity or URL, setup/reset, stable selectors, YAML drafts or flow files, expected RED reasons, and exact commands.
+3. Execute only from the approved plan, task by task, with Maestro-only RED/GREEN evidence.
+
+Do not jump directly to implementation, Maestro YAML authoring, or a RED/GREEN cycle from a short user request. If requirements or a Maestro test plan are missing, stay in the owning phase and create or repair those artifacts first.
 
 ## When to Use
 
@@ -64,13 +74,14 @@ The agent must not proceed until every requirement is either:
 
 The requirements must also identify the target platform or record it as a blocker.
 
-### Phase 2 - Implementation Planning
+### Phase 2 - Maestro Test + Implementation Planning
 
 Read and follow [`../planning/SKILL.md`](../planning/SKILL.md).
 
 Required outputs:
 - `docs/plans/<feature>/implementation-plan.md`
 - complete Maestro YAML drafts inside the implementation plan for every planned behavior.
+- a dedicated Maestro Test Plan section in the implementation plan covering setup/reset, selectors, commands, expected RED reasons, and evidence.
 
 Creating `.maestro/<feature>/*.yaml` files during planning is optional. The plan itself must still contain enough YAML, setup/reset, assertions, commands, and expected RED reasons for execution without guessing.
 

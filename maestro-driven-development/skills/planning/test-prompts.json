@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "prompt": "已有 requirements 和 edge-cases，帮我写可执行 implementation plan。",
+    "expected": "Agent reads requirements artifacts, inspects project structure, produces a self-contained implementation plan with file map, coverage map, Maestro YAML drafts, expected RED reasons, commands, fixtures, and evidence plan."
+  },
+  {
+    "id": 2,
+    "prompt": "需求里缺平台 adapter、appId/url、fixture 信息，计划阶段怎么处理？",
+    "expected": "Agent distinguishes blocking unknowns from deferred unknowns, inspects project files when possible, and refuses to hand off a first RED/GREEN task that requires guessed adapter, app identity, or fixture data."
+  },
+  {
+    "id": 3,
+    "prompt": "用户只说用 MDD 做这个功能，但没有 requirements artifacts。",
+    "expected": "Agent stops planning, routes back to workflow/requirements grilling, and does not infer requirements or write an implementation plan from memory."
+  },
+  {
+    "id": 4,
+    "prompt": "已有 requirements，帮我写测试 plan 后再实现。",
+    "expected": "Agent writes a dedicated Maestro Test Plan section with flow drafts, setup/reset, stable selectors, exact commands, expected RED reasons, and evidence before any production-code execution."
+  }
+]

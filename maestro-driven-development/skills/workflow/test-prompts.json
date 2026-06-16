@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "prompt": "帮我给 iOS 设置页新增一个开关，用 Maestro TDD 做完整流程。",
+    "expected": "Agent starts from the orchestration skill, routes through requirements, platform adapter selection, planning, execution, Maestro usage preflight, and Maestro-only TDD without jumping straight into code."
+  },
+  {
+    "id": 2,
+    "prompt": "修一个 Web UI bug，但现在目标 URL 或本地 server 起不来，怎么推进？",
+    "expected": "Agent classifies missing Web launch/server prerequisites as a blocker for real RED/GREEN evidence, reports what can still be prepared, and does not claim Maestro TDD completion."
+  },
+  {
+    "id": 3,
+    "prompt": "用 MDD 帮我实现一个保存按钮。",
+    "expected": "Agent starts from the workflow entry contract, clarifies requirements before planning or coding, writes a Maestro test plan inside the implementation plan, then executes only after the plan is complete with Maestro RED/GREEN evidence."
+  },
+  {
+    "id": 4,
+    "prompt": "直接用 Maestro TDD 修这个 UI bug。",
+    "expected": "Agent does not jump directly to YAML or production code. It checks whether requirements and a Maestro test plan already exist; if not, it routes to requirements grilling and planning before execution."
+  }
+]

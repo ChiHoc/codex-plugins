@@ -1,6 +1,6 @@
 ---
 name: planning
-description: Use when Maestro-observable requirements and platform boundary analysis are ready for implementation planning.
+description: Use only after Maestro-observable requirements and platform boundary analysis are complete. Produces the required Maestro test plan plus implementation plan before any production code or RED/GREEN execution.
 ---
 
 # Maestro Implementation Planning
@@ -19,6 +19,12 @@ Use after [`../requirements/SKILL.md`](../requirements/SKILL.md) has produced:
 Do not use if requirements are still missing Maestro-observable acceptance criteria or the target platform adapter is unknown.
 
 Do not use if blocking open questions remain. Unresolved items must already be marked as non-goals, deferred items, or accepted risks before planning starts.
+
+## Direct Invocation Guard
+
+If this skill is invoked from a short request such as "use MDD", "implement with Maestro", "write the tests", or "fix this with Maestro" and the requirements artifacts are missing, stop and route to the workflow/requirements phase. Do not infer requirements from the request and do not write a plan from memory.
+
+If the requirements artifacts exist but do not identify Maestro-observable acceptance, target adapter, trigger, actor, stable selector strategy, and non-goals/risks, return to requirements grilling before planning.
 
 ## Required Setup
 
@@ -80,6 +86,8 @@ Optional output when the project and runtime are ready for materialized flows:
 
 The implementation plan is required. Creating final `.maestro/<feature>/*.yaml` files during planning is optional, but every planned behavior must include a complete Maestro YAML draft inside the plan: `appId` or `url`, setup/reset, launch path, actions, assertions, expected RED reason, and exact command. A high-level Maestro plan is not enough for execution.
 
+The implementation plan must include a dedicated Maestro Test Plan section. This section is the handoff contract for MDD execution and must be complete enough to run the first RED without guessing.
+
 ## Plan Requirements
 
 The plan must include:
@@ -96,6 +104,7 @@ The plan must include:
 - Launch strategy.
 - Stable selector strategy.
 - Test data and fixture strategy.
+- Dedicated Maestro Test Plan with flows, setup/reset, selectors, exact commands, expected RED reasons, and evidence.
 - Evidence and handoff package plan.
 - Bite-sized tasks, each with:
   1. Write or update one Maestro flow/assertion.

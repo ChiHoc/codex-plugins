@@ -1,6 +1,6 @@
 ---
 name: usage
-description: Use before writing or running Maestro flows for Android, iOS, or Web targets, or when Maestro MCP, environment setup, selectors, evidence, and flow failures need diagnosis.
+description: Use for Maestro MCP/CLI preflight, adapter selection, selectors, YAML authoring, evidence, and failure diagnosis. In MDD feature work, use only as support for requirements/planning/execution, not as a shortcut around the required requirements and Maestro test plan phases.
 ---
 
 # Maestro Usage
@@ -29,6 +29,12 @@ Use before:
 - reporting Maestro evidence.
 
 Do not claim Maestro TDD evidence until the MCP/CLI preflight and selected platform adapter preflight have passed or the blocker is reported.
+
+## Direct Invocation Guard
+
+If this skill is invoked for user-visible feature work and the user asked for Maestro Driven Development/MDD, do not treat Maestro usage as the whole workflow. Route through the workflow entry point unless requirements and the Maestro Test Plan already exist.
+
+Use this skill directly only for Maestro setup, preflight, selector/debugging, or flow-failure diagnosis. For implementation work, return to requirements or planning when the request lacks clarified acceptance criteria, target adapter, setup/reset, flow drafts, expected RED reasons, or exact commands.
 
 ## Select a Platform Adapter
 

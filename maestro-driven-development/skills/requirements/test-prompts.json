@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "prompt": "新增保存按钮，点击后提示成功。",
+    "expected": "Agent asks one decision question at a time, identifies missing actor, trigger, preconditions, visible acceptance, failure/recovery behavior, boundary conditions, and Maestro observability."
+  },
+  {
+    "id": 2,
+    "prompt": "一个列表空态需求，用户没说边界条件，继续问清楚。",
+    "expected": "Agent derives relevant platform and Maestro boundary questions from project context instead of forcing generic edge cases, identifies the target adapter, and records unresolved items as non-goals, deferred items, or accepted risks."
+  },
+  {
+    "id": 3,
+    "prompt": "Android 设置页新增保存按钮：普通用户从 Settings 进入，表单已填写；点击 Save 后禁用按钮并显示 Saved toast，失败时显示 Save failed 并重新启用；空表单时 Save disabled；用 text=Save、toast 文案和 button enabled 状态做 Maestro 验证。",
+    "expected": "Agent recognizes actor, platform, trigger, preconditions, success path, visible acceptance, failure/recovery behavior, boundary condition, Maestro verification, and selector strategy are present, then passes the requirements gate without re-asking those satisfied fields."
+  }
+]

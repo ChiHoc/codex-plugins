@@ -1,6 +1,6 @@
 ---
 name: tdd
-description: Use when implementing Maestro-supported features with strict RED-GREEN-REFACTOR cycles where Maestro flows are the required tests.
+description: Use only inside approved MDD plan execution when a specific Maestro test plan task is ready for RED-GREEN-REFACTOR. Requires requirements, implementation plan, selected adapter, setup/reset, exact flow, command, and expected RED reason.
 ---
 
 # Maestro TDD
@@ -25,6 +25,12 @@ Use for:
 - Behavior changes that can be verified through Maestro.
 
 Do not use as a substitute for real execution when Maestro, platform tooling, device/simulator/browser/server, build/install, or launch prerequisites are missing.
+
+## Direct Invocation Guard
+
+If this skill is invoked without an approved implementation plan and Maestro Test Plan, stop and route back to the workflow/planning phase. Do not write production code, do not create an ad hoc flow, and do not claim RED/GREEN evidence from an unplanned test.
+
+If the current task does not include a concrete flow draft or file, exact command, setup/reset strategy, selected adapter, app identity or URL, and expected missing-behavior RED reason, return to planning before starting RED.
 
 ## Iron Law
 

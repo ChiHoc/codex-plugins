@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "prompt": "实现一个行为，先写 Maestro RED 再 GREEN。",
+    "expected": "Agent writes the smallest Maestro flow first for the selected adapter, verifies correct missing-behavior RED, implements minimal production code, reruns to GREEN, refactors only while green, and captures real evidence."
+  },
+  {
+    "id": 2,
+    "prompt": "Maestro 报 gRPC UNAVAILABLE，是否算 RED？",
+    "expected": "Agent classifies Android driver gRPC failures through the Android adapter as environment/driver blockers, runs the prescribed diagnosis or fixed-port recovery path, and reruns the flow only after deviceInfo succeeds."
+  },
+  {
+    "id": 3,
+    "prompt": "还没有 implementation plan，只让我先写一个 Maestro RED。",
+    "expected": "Agent refuses an ad hoc RED cycle, routes back to workflow/planning, and requires an approved Maestro Test Plan before writing production code or claiming RED/GREEN evidence."
+  }
+]

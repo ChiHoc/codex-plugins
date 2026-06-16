@@ -58,6 +58,14 @@ List only values that would block the first executable RED/GREEN cycle. Resolve 
 - Debug-only or test-only surfaces:
 - Platform-specific observability notes:
 
+## Maestro Test Plan
+
+This section is required before execution. It must be complete enough to run the first RED without guessing.
+
+| Flow / assertion | Requirement | Setup / reset | Stable selectors | Exact command | Expected RED reason | Evidence to capture |
+| --- | --- | --- | --- | --- | --- | --- |
+| `.maestro/<feature>/<flow>.yaml` | R1 |  |  | `maestro test .maestro/<feature>/<flow>.yaml` | FAIL because <missing user-visible behavior> | RED output, GREEN output, logs/hierarchy if failure is ambiguous |
+
 ## Tasks
 
 ### Task 1: <Small Behavior>

@@ -1,7 +1,7 @@
 {
   "name": "maestro-driven-development",
-  "version": "0.2.4",
-  "description": "Platform-aware development workflow skills with Maestro-first TDD.",
+  "version": "0.2.5",
+  "description": "Platform-aware development workflow skills with Maestro-first driven development.",
   "author": {
     "name": "Chiho"
   },
@@ -18,8 +18,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Maestro Driven Development",
-    "shortDescription": "Platform-aware requirements, planning, execution, and Maestro TDD skills.",
-    "longDescription": "A portable skill bundle for Maestro-supported targets, focused on Maestro-observable requirements, platform-aware implementation planning, task-by-task execution, and RED-GREEN-REFACTOR implementation with Maestro flows.",
+    "shortDescription": "Mandatory MDD workflow: clarify requirements, write a Maestro test plan, then execute RED/GREEN with Maestro.",
+    "longDescription": "A portable skill bundle for Maestro-supported targets. When a user asks to build, fix, test, or implement with Maestro Driven Development/MDD, the default route is mandatory: clarify requirements first, write a Maestro test plan inside the implementation plan, then execute task-by-task with Maestro-only RED-GREEN-REFACTOR evidence.",
     "developerName": "Chiho",
     "category": "Productivity",
     "capabilities": [
@@ -28,9 +28,9 @@
       "MCP"
     ],
     "defaultPrompt": [
-      "Plan a feature with Maestro TDD.",
-      "Grill requirements for Maestro coverage.",
-      "Execute a Maestro-backed plan task by task."
+      "Use MDD to clarify requirements before planning or coding.",
+      "Write a Maestro test plan before implementation.",
+      "Execute the approved MDD plan with Maestro RED/GREEN evidence."
     ],
     "brandColor": "#3B82F6"
   },

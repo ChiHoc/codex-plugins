@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "prompt": "按已有 implementation-plan 执行第一个任务。",
+    "expected": "Agent reads requirements and plan artifacts, reviews the task gate, materializes YAML if needed, runs correct RED before production code, implements minimally, verifies GREEN, records evidence, and follows task order."
+  },
+  {
+    "id": 2,
+    "prompt": "计划缺 RED 原因或 flow draft，执行阶段怎么停住并回路？",
+    "expected": "Agent stops before production code, classifies the gap as a planning blocker, routes back to implementation planning, and does not invent RED reasons or flow drafts from memory."
+  },
+  {
+    "id": 3,
+    "prompt": "执行一个 plan，但 implementation-plan 里没有 Maestro Test Plan section。",
+    "expected": "Agent stops before production code, routes back to planning, and requires a complete Maestro Test Plan with flows, commands, setup/reset, expected RED reasons, and evidence expectations."
+  }
+]
