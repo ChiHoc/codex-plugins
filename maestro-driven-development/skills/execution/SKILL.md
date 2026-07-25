@@ -14,7 +14,7 @@ This document does not replace [`../tdd/SKILL.md`](../tdd/SKILL.md). It coordina
 ## When to Use
 
 Use when:
-- `docs/plans/<feature>/implementation-plan.md` exists.
+- `.plans/<feature>/implementation-plan.md` exists.
 - Requirements and boundary-analysis artifacts exist.
 - The plan names Android, iOS, or Web as the selected platform adapter.
 - The next step is to implement the planned work.
@@ -32,9 +32,9 @@ If this skill is invoked before requirements artifacts and the implementation pl
 ## Required Setup
 
 1. Read:
-   - `docs/requirements/<feature>/requirements.md`
-   - `docs/requirements/<feature>/edge-cases.md`
-   - `docs/plans/<feature>/implementation-plan.md`
+   - `.requirements/<feature>/requirements.md`
+   - `.requirements/<feature>/edge-cases.md`
+   - `.plans/<feature>/implementation-plan.md`
    - the selected platform adapter under [`../usage/references/platform-adapters/`](../usage/references/platform-adapters/)
 2. Review the plan before touching production code:
    - Are tasks small enough to execute one behavior at a time?

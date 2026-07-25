@@ -13,8 +13,8 @@ This skill converts clarified requirements and boundary analysis into a self-con
 
 Use after [`../requirements/SKILL.md`](../requirements/SKILL.md) has produced:
 
-- `docs/requirements/<feature>/requirements.md`
-- `docs/requirements/<feature>/edge-cases.md`
+- `.requirements/<feature>/requirements.md`
+- `.requirements/<feature>/edge-cases.md`
 
 Do not use if requirements are still missing Maestro-observable acceptance criteria or the target platform adapter is unknown.
 
@@ -45,6 +45,7 @@ If the requirements artifacts exist but do not identify Maestro-observable accep
    - deferred unknown: not needed for the next executable task and explicitly recorded as deferred or accepted risk.
 5. Before writing tasks, map files and responsibilities so task decomposition is grounded in the actual project structure.
 6. Follow [`../usage/SKILL.md`](../usage/SKILL.md) for Maestro environment preflight commands, YAML draft shape, selector strategy, setup/reset design, and debugging/evidence expectations.
+7. When the target is a Git repository, ensure its root `.gitignore` contains `/.requirements/` and `/.plans/` before writing local MDD artifacts. Append only missing entries.
 
 ## CHECKPOINT - Planning Gate STOP
 
@@ -75,7 +76,7 @@ Use this skill's [`templates/implementation-plan.md`](templates/implementation-p
 Required output:
 
 ```text
-docs/plans/<feature>/implementation-plan.md
+.plans/<feature>/implementation-plan.md
 ```
 
 Optional output when the project and runtime are ready for materialized flows:

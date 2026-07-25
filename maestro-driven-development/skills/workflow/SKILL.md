@@ -64,8 +64,8 @@ If a gate fails, stop in the current phase. Do not fill gaps from memory or trea
 Read and follow [`../requirements/SKILL.md`](../requirements/SKILL.md).
 
 Required outputs:
-- `docs/requirements/<feature>/requirements.md`
-- `docs/requirements/<feature>/edge-cases.md`
+- `.requirements/<feature>/requirements.md`
+- `.requirements/<feature>/edge-cases.md`
 
 The agent must not proceed until every requirement is either:
 - Maestro-observable,
@@ -79,7 +79,7 @@ The requirements must also identify the target platform or record it as a blocke
 Read and follow [`../planning/SKILL.md`](../planning/SKILL.md).
 
 Required outputs:
-- `docs/plans/<feature>/implementation-plan.md`
+- `.plans/<feature>/implementation-plan.md`
 - complete Maestro YAML drafts inside the implementation plan for every planned behavior.
 - a dedicated Maestro Test Plan section in the implementation plan covering setup/reset, selectors, commands, expected RED reasons, and evidence.
 
@@ -100,9 +100,9 @@ Read and follow [`../usage/SKILL.md`](../usage/SKILL.md) during planning when se
 Read and follow [`../execution/SKILL.md`](../execution/SKILL.md).
 
 Required inputs:
-- `docs/requirements/<feature>/requirements.md`
-- `docs/requirements/<feature>/edge-cases.md`
-- `docs/plans/<feature>/implementation-plan.md`
+- `.requirements/<feature>/requirements.md`
+- `.requirements/<feature>/edge-cases.md`
+- `.plans/<feature>/implementation-plan.md`
 
 The agent must review the plan for blockers before touching production code, execute tasks in order, track progress, and stop rather than guessing when instructions or evidence are insufficient.
 

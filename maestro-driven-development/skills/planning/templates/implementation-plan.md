@@ -12,8 +12,8 @@
 
 ## Inputs
 
-- Requirements: `docs/requirements/<feature>/requirements.md`
-- Boundary analysis: `docs/requirements/<feature>/edge-cases.md`
+- Requirements: `.requirements/<feature>/requirements.md`
+- Boundary analysis: `.requirements/<feature>/edge-cases.md`
 - Platform adapter:
 
 ## Environment Gate

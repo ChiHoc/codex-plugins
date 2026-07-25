@@ -29,14 +29,15 @@ Do not proceed to implementation planning until every requirement satisfies the 
 4. Challenge terms against the project's glossary or context docs when they exist. If the user's wording conflicts with a canonical term, stop and resolve the term before planning.
 5. Record resolved terms in the feature requirements first. Update `CONTEXT.md` or another project glossary only when the project already uses that glossary pattern or the user asks for it.
 6. If no glossary exists, do not create one just for exploration. Create `CONTEXT.md` only when the user approves or the project convention clearly requires it.
+7. When the target is a Git repository, ensure its root `.gitignore` contains `/.requirements/` and `/.plans/` before writing local MDD artifacts. Append only missing entries.
 
 ## Output Files
 
 For each feature, create or update:
 
 ```text
-docs/requirements/<feature>/requirements.md
-docs/requirements/<feature>/edge-cases.md
+.requirements/<feature>/requirements.md
+.requirements/<feature>/edge-cases.md
 ```
 
 Use this skill's [`templates/requirements.md`](templates/requirements.md) and [`templates/edge-cases.md`](templates/edge-cases.md) as the default shapes.
